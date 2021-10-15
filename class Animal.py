@@ -3,12 +3,12 @@ class Animal:
     color="";
     nombre="";
 
-    def __init__(self,tam,color): #constructor de la clase
+    def __init__(self,tam=5,color="azul"): #constructor de la clase
         self.tam=tam
         self.color=color
         print ("Nacio un Animal")
 
-    def setNombre(self,nombre):
+    def setNombre(self,nombre="pantera"):
         self.nombre=nombre
 
     def getTamano(self):
@@ -43,16 +43,16 @@ class Perro(Animal):
         print ("El perro ladra\n")
 
 #Programa Principal
-gato = Gato(10,"Negro");
+''' gato = Gato(10,"Negro");
 gato.setNombre("Mustafar")
 gato.maullar()
 print ("Su nombre es "+gato.getNombre())
 print (" mide "+str(gato.getTamano()))
-print ("su color es "+gato.getColor()+"\n")
+print ("su color es "+gato.getColor()+"\n") '''
 
-perro = Perro(20,"Blanco")
-perro.setNombre("Lacie")
-perro.ladrar();
-print ("Su nombre es "+perro.getNombre())
-print (" mide "+str(perro.getTamano()))
-print ("su color es "+perro.getColor()+"\n")
+Animal = Animal(20,"Blanco")
+Animal.setNombre("Lacie")
+
+print ("Su nombre es "+Animal.getNombre())
+print (" mide "+str(Animal.getTamano()))
+print ("su color es "+Animal.getColor()+"\n")
